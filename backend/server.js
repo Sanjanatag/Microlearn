@@ -7,9 +7,12 @@ const cron = require('node-cron');
 const connectDB = require('./config/db');
 const { fetchRSSFeeds } = require('./utils/rssParser');
 
+<<<<<<< HEAD
 require('dotenv').config();
 const mongoose = require('mongoose');
 
+=======
+>>>>>>> e4c85d162aeed376a0885a8ae240148bbb70bf42
 // Routes
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
@@ -28,7 +31,12 @@ const io = socketIO(server, {
 });
 
 // Connect to MongoDB
+<<<<<<< HEAD
 mongoose.connect(process.env.MONGO_URI);
+=======
+connectDB();
+
+>>>>>>> e4c85d162aeed376a0885a8ae240148bbb70bf42
 // Middleware
 app.use(cors());
 app.use(express.json());
